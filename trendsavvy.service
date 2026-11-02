@@ -1,0 +1,16 @@
+[Unit]
+Description=Trendsavvy Telegram bot
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=ubuntu
+WorkingDirectory=/home/ubuntu/trendsavvy
+EnvironmentFile=/home/ubuntu/trendsavvy/.env
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/home/ubuntu/trendsavvy/venv/bin/python bot.py
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
