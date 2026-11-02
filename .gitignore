@@ -1,0 +1,8 @@
+# Secrets - never upload
+.env
+*.pem
+
+# Python
+venv/
+__pycache__/
+*.pyc
